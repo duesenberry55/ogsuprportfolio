@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+#DUESENBERRY MBIKANG AGBORTAR AKO FE21A175
+INITIAL REPO https://github.com/duesenberry55/myportfolio
+Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
