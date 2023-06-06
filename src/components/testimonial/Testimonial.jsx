@@ -79,7 +79,7 @@ export const Testimonial = () => {
       Cname: "Masango Vanessa",
     },
     {
-      id: 1,
+      id: 9,
       testimonial:
         "Your attention to detail and ability to understand my needs made the whole process of creating my Consultation website a breeze. We could not be happier with the result!",
       avatar: AV8,
@@ -101,6 +101,7 @@ export const Testimonial = () => {
           return (
             <SwiperSlide key={testi.id} className="testimonial">
               <table>
+                <tbody>
                 <tr>
                   <td>
                     <div className="client__avatar">
@@ -112,6 +113,7 @@ export const Testimonial = () => {
                     <small className="client__review"> {testi.testimonial} </small>
                   </td>
                 </tr>
+                </tbody>
               </table>
             </SwiperSlide>
           );

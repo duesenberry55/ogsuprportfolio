@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import moi from '/Seal/react/Portfolio/portfolio/src/assets/me1.png'
+import moi from '../../assets/me1.png'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'

@@ -4,21 +4,26 @@ import {MdOutlineEmail} from 'react-icons/md'
 import {AiOutlineLinkedin} from 'react-icons/ai'
 import {BsWhatsapp} from 'react-icons/bs'
 import {useRef} from 'react'
-//__import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 
 function Contact() {
-  const form = useRef()
+  const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    //__emailjs.sendForm('service_5vuauza', 'template_fdnnl56', form.current, 'EmSdUNQzQuxkUqGWx')
-    e.target.reset()
+    emailjs.sendForm("service_4oeonun", "template_e6z097t", form.current, "hyxSOgW6Sab3Auqqs")
+    //e.target.reset()
       .then((result) => {
         console.log(result.text)
-      }, (error) => {
+        console.log("message sent")
+        e.target.reset()
+      }, 
+      (error) => {
         console.log(error.text)
-      })
+        console.log("ERROR! message not sent")
+      }
+      )
   }
   return (
     <section id="contact">
@@ -68,10 +73,10 @@ function Contact() {
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="full name" required />
+          <input type="text" name="user_name" placeholder="full name" required />
           <input
             type="email"
-            name="email"
+            name="user_email"
             placeholder="your email"
             required />
           <textarea
